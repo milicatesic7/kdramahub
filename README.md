@@ -1,6 +1,6 @@
 # KDramaHub
 
-Welcome to KDramaHub — cozy and aesthetic web app for all things K-Drama!  
+Welcome to KDramaHub: cozy and aesthetic web app for all things K-Drama!  
 Discover trending shows, search your favorites, manage your own watchlist, and even get AI-powered drama recommendations based on your preferences
 
 ## Features
