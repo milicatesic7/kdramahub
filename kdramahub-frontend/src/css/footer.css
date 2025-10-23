@@ -1,0 +1,40 @@
+:root {
+  --white: #fffcf9;
+  --beige: #fdf5f0;
+  --light-pink: #fadadd;
+  --medium-pink: #eec6ca;
+  --dark-pink: #fb7892;
+  --yellow: #fcf6bd;
+  --coral: #ff9a8a;
+  --black: #3a3a3a;
+}
+
+footer {
+  background-color: #7c7c7c;
+  opacity: 0.8;
+  padding: 10px 100px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  font-size: 15px;
+  font-family: "Marmelad";
+  color: var(--beige);
+}
+
+footer span {
+  font-weight: 100;
+  font-family: "Questrial";
+}
+
+footer a {
+  color: var(--medium-pink);
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: var(--coral);
+}

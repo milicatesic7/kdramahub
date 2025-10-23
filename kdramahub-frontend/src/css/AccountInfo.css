@@ -1,0 +1,171 @@
+:root {
+  --white: #fffcf9;
+  --beige: #fdf5f0;
+  --light-pink: #fadadd;
+  --medium-pink: #eec6ca;
+  --dark-pink: #fb7892;
+  --yellow: #fcf6bd;
+  --coral: #ff9a8a;
+  --black: #3a3a3a;
+}
+
+.account-info-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: right;
+  align-items: top;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.account-info {
+  background: var(--beige);
+  border-radius: 12px;
+  position: relative;
+  top: 75px;
+  right: 100px;
+  text-align: left;
+  animation: slideIn 0.4s ease;
+  padding: 15px;
+  height: fit-content;
+  width: 200px;
+}
+
+.account-info-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.info-holder {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+}
+
+.label {
+  color: #7c7c7c;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 4px;
+}
+
+.Info {
+  color: black;
+  white-space: normal; /* allow wrapping */
+  word-wrap: break-word; /* break long words if needed */
+  overflow-wrap: break-word;
+  font-size: 20px;
+}
+
+.info-sound {
+  display: flex;
+  gap: 13px;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.info-sound .label {
+  margin-top: 0;
+}
+
+.sound {
+  color: var(--dark-pink);
+  font-size: 20px;
+  padding: 0;
+  height: fit-content;
+}
+
+.logOutBtn {
+  color: var(--dark-pink);
+  font-size: 20px;
+  text-decoration: underline;
+  padding: 0;
+  background-color: transparent;
+  margin-top: 10px;
+}
+
+.logOutBtn:hover {
+  color: var(--coral);
+}
+
+.accountBtn {
+  color: #7c7c7c;
+  font-size: 15px;
+  background-color: transparent;
+  padding: 0;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.accountBtn:hover {
+  color: var(--black);
+}
+
+.passwordForm {
+  position: absolute;
+  top: 185px;
+  right: 210px;
+  background-color: var(--light-pink);
+  padding: 20px 10px;
+  border-radius: 12px;
+  height: fit-content;
+}
+
+.passwordForm input {
+  margin-top: 5px;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.03);
+}
+
+.passwordForm button {
+  background-color: transparent;
+  padding: 0;
+  font-size: 20px;
+  color: var(--dark-pink);
+  text-align: left;
+}
+
+.passwordForm button:hover {
+  color: var(--black);
+}
+
+.deleteDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  text-align: center;
+  background-color: var(--light-pink);
+  padding: 20px 10px;
+  border-radius: 12px;
+}
+
+.deleteDiv h1 {
+  margin-bottom: 20px;
+}
+
+.deleteBtn {
+  padding: 7px 15px;
+  border-radius: 12px;
+  margin: 0 20px;
+  background-color: var(--dark-pink);
+  color: var(--beige);
+  font-size: 20px;
+}
+
+.deleteBtn:hover {
+  background-color: var(--coral);
+}

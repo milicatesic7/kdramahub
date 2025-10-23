@@ -1,0 +1,8 @@
+.progress-bar {
+  height: 50px;
+}
+
+.progress-bar div {
+  height: 50px;
+  width: 70px;
+}

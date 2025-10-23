@@ -1,0 +1,36 @@
+:root {
+  --white: #fffcf9;
+  --beige: #fdf5f0;
+  --light-pink: #fadadd;
+  --medium-pink: #eec6ca;
+  --dark-pink: #fb7892;
+  --yellow: #fcf6bd;
+  --coral: #ff9a8a;
+  --black: #3a3a3a;
+}
+
+.watch-page {
+  padding: 150px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.watch-heading {
+  color: var(--dark-pink);
+  font-family: "Marmelad", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin: auto;
+}
+
+.watch-heading span {
+  color: var(--white);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.watch-heading span:hover {
+  color: var(--medium-pink);
+}

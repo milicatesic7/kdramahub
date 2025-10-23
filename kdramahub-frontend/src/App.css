@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Marmelad&family=Questrial&display=swap");
+#root {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Questrial", sans-serif;
+  --white: #fffcf9;
+  --beige: #fdf5f0;
+  --light-pink: #fadadd;
+  --medium-pink: #eec6ca;
+  --dark-pink: #fb7892;
+  --yellow: #fcf6bd;
+  --coral: #ff9a8a;
+  --black: #3a3a3a;
+}
+
+body.in-favorites-page .page-wrapper {
+  background-color: var(--black) !important;
+}
+
+body.nav-dark nav {
+  background-color: var(--black);
+}
+
+body.nav-dark .page-wrapper {
+  background-color: var(--light-pink);
+}
+
+.page-wrapper,
+body.ai .page-wrapper {
+  background-color: var(--white);
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-wrapper.pages-wr {
+  background: var(--black);
+}
+
+main {
+  flex: 1;
+}

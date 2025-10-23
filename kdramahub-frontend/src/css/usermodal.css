@@ -1,0 +1,209 @@
+:root {
+  --white: #fffcf9;
+  --beige: #fdf5f0;
+  --light-pink: #fadadd;
+  --medium-pink: #eec6ca;
+  --dark-pink: #fb7892;
+  --yellow: #fcf6bd;
+  --coral: #ff9a8a;
+  --black: #3a3a3a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Questrial", sans-serif;
+  box-sizing: border-box;
+}
+
+.user-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-modal {
+  background-color: var(--beige);
+  padding: 25px;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 4px 5px 5px 3px var(--medium-pink);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.user-modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.user-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.user-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-option label {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+}
+
+.user-option button {
+  padding: 0.6rem 1rem;
+  background: #1e293b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.user-option button:hover {
+  background-color: #0056b3;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+  width: 300px;
+}
+
+h1 {
+  font-family: "Marmelad", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--dark-pink);
+}
+
+.user-form input {
+  background-color: var(--white);
+  outline: none;
+  font-size: 15px;
+  color: var(--black);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 22px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.user-form input::placeholder {
+  color: #7c7c7c;
+  opacity: 1;
+}
+
+.user-form input:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.user-form input:active {
+  border: none;
+  outline: none;
+}
+
+.user-form button {
+  width: 300px;
+  background: linear-gradient(90deg, var(--dark-pink), var(--dark-pink));
+  color: var(--beige);
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  margin-top: 60px;
+  text-align: center;
+  transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out,
+    transform 0.2s ease;
+}
+
+.user-form button:hover {
+  background: linear-gradient(90deg, var(--coral), var(--dark-pink));
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.user-form p {
+  font-size: 15px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.user-form p span {
+  color: var(--dark-pink);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.user-form p span:hover {
+  color: var(--coral);
+}
+
+.user-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 0;
+  background: transparent;
+}
+
+.logoIcon {
+  position: relative;
+  margin: 0 auto;
+  width: 38px;
+  height: 70px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.hand,
+.heartLogo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hand {
+  z-index: 1;
+}
+
+.heartLogo {
+  display: inline-block;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+  top: -4px;
+  left: 0;
+  z-index: 2;
+}
+
+.heartLogo:hover {
+  transform: rotate(360deg) scale(1.1);
+}

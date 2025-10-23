@@ -1,0 +1,122 @@
+:root {
+  font-family: "Questrial", sans-serif;
+  --white: #fffcf9;
+  --beige: #fdf5f0;
+  --light-pink: #fadadd;
+  --medium-pink: #eec6ca;
+  --dark-pink: #fb7892;
+  --yellow: #fcf6bd;
+  --coral: #ff9a8a;
+  --black: #3a3a3a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  height: 75px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 100px;
+  background-color: transparent;
+  font-family: "Questrial", sans-serif;
+  font-size: 20px;
+  color: var(--white);
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+}
+
+.navbar.pages {
+  background-color: black;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: var(--medium-pink);
+}
+
+.userBtn {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 0px;
+  height: 35px;
+  margin-left: 50px;
+  justify-content: center;
+  font-family: "Questrial";
+  font-size: 20px;
+  align-items: center;
+  background-color: var(--dark-pink);
+  border-radius: 12px 30px 30px 12px;
+  transition: color 0.2s ease-in-out;
+}
+
+.userBtn img {
+  margin-left: 10px;
+  height: 35px;
+}
+
+.userBtn:hover {
+  color: var(--yellow);
+}
+
+/*.userBtn:hover img {
+  content: url("../assets/images/user-hover.png");
+}*/
+
+.logo {
+  position: relative;
+  width: 156px;
+  height: 45px;
+}
+
+.logoIconNav,
+.logoText {
+  position: absolute;
+}
+
+.logoIconNav {
+  top: 5px;
+}
+
+.logoText {
+  left: 34px;
+}
+
+.heartLogoNav {
+  position: absolute;
+  top: -3px;
+  left: -5px;
+  z-index: 4;
+  animation: translateY 0.3s ease-in-out, translateY 0.3s ease-in-out;
+}
+
+.logoText h1 {
+  margin-bottom: 0;
+  line-height: 26px;
+}
+
+.logoText p {
+  margin-top: 0;
+  letter-spacing: 0.09em;
+}
+
+.heartLogoNav:hover {
+  transform: translateY(-4px) scale(1.2);
+}

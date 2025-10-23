@@ -1,0 +1,118 @@
+:root {
+  --white: #fffcf9;
+  --beige: #fdf5f0;
+  --light-pink: #fadadd;
+  --medium-pink: #eec6ca;
+  --dark-pink: #fb7892;
+  --yellow: #fcf6bd;
+  --coral: #ff9a8a;
+  --black: #3a3a3a;
+}
+
+.heart {
+  font-size: 24px;
+  background: transparent;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  z-index: 3;
+  border: none;
+  cursor: pointer;
+  color: var(--beige);
+  border: solid 2px var(--beige);
+  border-radius: 50px;
+  padding: 5px 12px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.heart:hover {
+  background-color: var(--coral);
+}
+
+.heart.active {
+  color: red;
+  background-color: var(--beige);
+}
+
+@keyframes heart-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Sparkling dots */
+@keyframes sparkles {
+  0% {
+    opacity: 0;
+    transform: scale(0) translate(0, 0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5) translate(10px, -10px);
+  }
+}
+
+/* Reset before animation */
+.heart.sparkle,
+.heart.sad {
+  animation: none;
+}
+
+.heart.sparkle {
+  animation: heart-pop 0.5s ease forwards;
+}
+
+.heart.sparkle::after {
+  content: "✨";
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  font-size: 16px;
+  opacity: 0;
+  animation: sparkles 0.6s ease forwards;
+}
+
+.heart.sparkle::before {
+  content: "✨";
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  font-size: 16px;
+  opacity: 0;
+  animation: sparkles 0.6s ease forwards 0.1s;
+}
+
+.heart.sad::after {
+  content: "😔";
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  font-size: 16px;
+  opacity: 0;
+  animation: sparkles 0.6s ease forwards;
+}
+
+.heart.sad::before {
+  content: "💧";
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  font-size: 16px;
+  opacity: 0;
+  animation: sparkles 0.6s ease forwards 0.1s;
+}

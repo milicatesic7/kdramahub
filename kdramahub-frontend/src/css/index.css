@@ -1,0 +1,316 @@
+:root {
+  font-family: "Questrial", sans-serif;
+  --white: #fffcf9;
+  --beige: #fdf5f0;
+  --light-pink: #fadadd;
+  --medium-pink: #eec6ca;
+  --dark-pink: #fb7892;
+  --yellow: #fcf6bd;
+  --coral: #ff9a8a;
+  --black: #3a3a3a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Questrial", sans-serif;
+  font-weight: 400;
+  color: var(--black);
+  overflow-x: hidden;
+}
+
+button {
+  display: inline-block;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.6rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 25px;
+  color: var(--white);
+  background-image: url("../assets/test.png");
+  transition: background-image 1s ease-in-out;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
+
+.hero-bg.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-wave {
+  height: 50px;
+  margin-bottom: -5px;
+  width: 100%;
+  background-image: url("../assets/waves.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  z-index: 2;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  margin: 10rem auto 1rem auto;
+  align-items: center;
+}
+
+.search-container p {
+  color: var(--white);
+  margin-top: 15px;
+  margin-bottom: 5rem;
+}
+
+.search-box {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 25px;
+  width: 500px;
+  height: 50px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.search-box input {
+  flex: 1;
+  height: 100%;
+  padding: 0 30px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  color: var(--black);
+  font-size: 16px;
+  background: transparent;
+  line-height: normal;
+}
+
+.search-box input::placeholder {
+  color: #7c7c7c;
+}
+
+.promo {
+  text-align: center;
+  margin: 70px auto;
+}
+
+.promo p {
+  margin-bottom: 5px;
+}
+
+.promo span {
+  position: relative;
+  margin: 0 10px;
+  font-size: 30px;
+  background: linear-gradient(90deg, var(--coral), var(--light-pink));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.special span {
+  cursor: pointer;
+}
+
+.special span:hover {
+  background: none;
+  text-decoration: none;
+  -webkit-text-fill-color: initial;
+  color: var(--coral);
+}
+
+.special span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--coral), var(--light-pink));
+  border-radius: 2px;
+}
+
+.hero img {
+  margin: -10px;
+  padding: 0;
+}
+
+.drama-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 100px;
+}
+
+.drama-card {
+  background-color: var(--beige);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: var(--black);
+  font-size: 15px;
+  overflow: visible;
+}
+
+.poster-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.poster {
+  width: 100%;
+  height: 330px;
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+.poster-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 330px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px 12px 0 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.poster-wrapper:hover .poster-overlay {
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.drama-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  flex: 1;
+}
+
+.drama-card-content h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.additional {
+  display: flex;
+  align-items: center;
+}
+
+.additional p {
+  color: var(--coral);
+  margin-right: 5px;
+}
+
+.drama-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.drama-grid > button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.05rem;
+}
+
+.toTop-btn {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1000;
+  padding: 5px 15px 10px;
+  font-size: 25px;
+  background-color: var(--coral);
+  color: var(--beige);
+}
+
+.toTop-btn:hover {
+  background-color: var(--dark-pink);
+}
+
+.sound-modal {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: var(--light-pink);
+  padding: 10px 20px;
+  z-index: 1000;
+  font-size: 18px;
+}
+
+.sound-modal span,
+.sound-modal button {
+  font-family: "Marmelad", sans-serif;
+  background-color: transparent;
+  padding: 0;
+  margin: 0 5px;
+  color: black;
+  font-size: 20px;
+}
+
+.sound-modal button {
+  margin: 15px 20px 0 0;
+  transition: scale ease-in-out 0.3s;
+}
+
+.sound-modal button:hover {
+  scale: 1.05;
+}

@@ -1,0 +1,48 @@
+.star-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.star-wrapper img {
+  margin-right: 5px;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    filter: drop-shadow(0 0 0px gold);
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px gold);
+  }
+  70% {
+    filter: drop-shadow(0 0 3px gold);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.in-view .sparkle-star {
+  animation: sparkle 1.2s ease-out forwards; /* longer duration */
+}
+
+/* stagger delays remain the same */
+.star-0 {
+  animation-delay: 0s;
+}
+.star-1 {
+  animation-delay: 0.2s;
+}
+.star-2 {
+  animation-delay: 0.4s;
+}
+.star-3 {
+  animation-delay: 0.6s;
+}
+.star-4 {
+  animation-delay: 0.8s;
+}

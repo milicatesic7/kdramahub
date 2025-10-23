@@ -1,0 +1,163 @@
+:root {
+  --white: #fffcf9;
+  --beige: #fdf5f0;
+  --light-pink: #fadadd;
+  --medium-pink: #eec6ca;
+  --dark-pink: #fb7892;
+  --yellow: #fcf6bd;
+  --coral: #ff9a8a;
+  --black: #3a3a3a;
+}
+
+.recommend-wrap {
+  margin: 2rem auto;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.recommend-wrap h1 {
+  margin-bottom: 10px;
+}
+
+.recommend-wrap h2,
+.recommend-wrap h3 {
+  font-weight: 400;
+  font-size: 25px;
+  color: #7c7c7c;
+  transition: background-position 2s ease;
+}
+
+.recommend-wrap h2 {
+  margin: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #7c7c7c;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 35px;
+}
+
+.progress-bar {
+  display: flex;
+  width: 40%;
+  gap: 4px;
+  margin: 20px auto;
+}
+
+.progress-bar > div {
+  flex: 1;
+  height: 8px;
+  background-color: var(--light-pink);
+  border-radius: 12px;
+  transition: background-color 0.4s ease;
+}
+
+/* Wrapper */
+.options-wrap {
+  margin: 10px auto;
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* spacing between buttons */
+  background: rgba(230, 225, 220, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 16px;
+  justify-content: center;
+}
+
+.selected-wrap {
+  width: fit-content;
+}
+
+/* Glass buttons */
+.option {
+  position: relative;
+  cursor: pointer;
+  padding: 10px 25px;
+  background: rgba(245, 240, 235, 0.25); /* more transparent for glass effect */
+  color: #6b5e50;
+  border: none;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1),
+    inset 0 0 1px rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.selected {
+  background-color: var(--medium-pink);
+  color: var(--white);
+}
+
+/* Shimmer effect using pseudo-element */
+.option::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  transform: rotate(25deg);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+/* Hover effect */
+.option:hover {
+  background: rgba(245, 240, 235, 0.4); /* slightly more opaque on hover */
+  color: #4a3f36;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15),
+    inset 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.option:hover::before {
+  transform: rotate(25deg) translateX(10%) translateY(10%);
+  opacity: 0.8;
+}
+
+.drama-results {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 0;
+  justify-content: center;
+  gap: 20px;
+}
+
+.new-recommend-btn {
+  background-color: var(--medium-pink);
+  color: var(--white);
+}
+
+.new-recommend-btn:hover {
+  background-color: var(--light-pink);
+}
+
+.drama-names {
+  line-height: 1.4;
+  font-size: 18px;
+  width: 50%;
+  margin: auto;
+}
+.drama-names span {
+  color: var(--dark-pink);
+  font-size: 20px;
+}
+
+.recommend-wrap .loader {
+  margin-left: 35%;
+}

@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Marmelad&family=Questrial&display=swap");
+:root {
+  font-family: "Questrial", sans-serif;
+  --white: #fffcf9;
+  --beige: #fdf5f0;
+  --light-pink: #fadadd;
+  --medium-pink: #eec6ca;
+  --dark-pink: #fb7892;
+  --yellow: #fcf6bd;
+  --coral: #ff9a8a;
+  --black: #3a3a3a;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.msg-modal-wrap {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: var(--light-pink);
+  padding: 30px 25px;
+  z-index: 1000;
+  width: 400px;
+  font-size: 18px;
+  z-index: 1000001;
+  box-shadow: 0px 0px 4px #3a3a3a;
+}
+
+.msg-modal-wrap h2 {
+  font-family: "Marmelad", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.msg-modal-wrap p {
+  font-size: 18px;
+  color: var(--black);
+}
+
+.msg-modal-wrap span {
+  color: var(--dark-pink);
+  cursor: pointer;
+  padding: 0 5px;
+  font: "Marmelad", sans-serif;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.msg-modal-wrap span:hover {
+  color: var(--coral);
+}

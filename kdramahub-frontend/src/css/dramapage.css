@@ -1,0 +1,154 @@
+:root {
+  --white: #fffcf9;
+  --beige: #fdf5f0;
+  --light-pink: #fadadd;
+  --medium-pink: #eec6ca;
+  --dark-pink: #fb7892;
+  --yellow: #fcf6bd;
+  --coral: #ff9a8a;
+  --black: #3a3a3a;
+}
+
+.drama-page {
+  display: flex;
+  margin: 2rem auto;
+  padding: 100px;
+  padding-bottom: 0;
+  justify-content: space-between;
+  background: linear-gradient(180deg, black, var(--black));
+}
+
+.poster-holder {
+  position: relative;
+  width: 370px;
+}
+
+.popularityModal {
+  position: absolute;
+  top: 110px;
+  right: -155px;
+  font-size: 15px;
+  padding: 10px;
+  background-color: var(--beige);
+  color: var(--dark-pink);
+  border-radius: 12px;
+}
+
+.img-popularity {
+  cursor: pointer;
+  position: absolute;
+  padding: 7px;
+  border-radius: 100%;
+  border: solid 2px var(--beige);
+  margin-top: 104px;
+  margin-left: 22px;
+  width: 43px;
+}
+
+.img-popularity:hover {
+  background-color: var(--dark-pink);
+}
+
+.drama-poster {
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.drama-info {
+  width: 450px;
+}
+
+.drama-title {
+  font-size: 35px;
+  color: var(--beige);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.drama-overview {
+  line-height: 1.7;
+  color: var(--beige);
+  padding: 0.8rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 1rem;
+}
+
+.vote-rating {
+  font-size: 1rem;
+  color: #dadada;
+  padding: 20px 0;
+  padding-bottom: 5px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.popularity {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #dadada;
+  border-radius: 12px;
+}
+
+.vote-score {
+  font-size: 30px;
+  color: var(--dark-pink);
+}
+
+.vote-count {
+  margin-right: 20px;
+}
+
+.vote-rating img {
+  width: 18px;
+  height: 18px;
+  content: url("../assets/images/star-pink.png");
+}
+
+.vote-rating img[alt="empty star"] {
+  content: url("../assets/images/star-empty-pink.png");
+}
+
+.vote-rating img[alt="half star"] {
+  content: url("../assets/images/half-star-pink.png");
+}
+
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 300px;
+}
+
+.recommendations h2 {
+  color: var(--dark-pink);
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+
+.recommHold {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.recommHold img {
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.recommHold h3 {
+  color: var(--medium-pink);
+  font-weight: 300;
+}
