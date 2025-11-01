@@ -14,6 +14,7 @@ namespace kdramahub_backend.Controllers
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IConfiguration _config;
 
+
         public AiRecommendController(IHttpClientFactory httpClientFactory, IConfiguration config)
         {
             _httpClientFactory = httpClientFactory;
@@ -24,9 +25,13 @@ namespace kdramahub_backend.Controllers
         [HttpPost("recommend")]
         public async Task<IActionResult> Recommend([FromBody] PreferenceRequest request)
         {
-            var apiKey = _config["Gemini:ApiKey"];
-            var apiUrl = _config["Gemini:ApiUrl"];
+            var apiKey = Environment.GetEnvironmentVariable("Gemini__ApiKey")
+                         ?? throw new Exception("Gemini__ApiKey not set!");
+            var apiUrl = Environment.GetEnvironmentVariable("Gemini__ApiUrl")
+                         ?? throw new Exception("Gemini__ApiUrl not set!");
             var modelName = "models/gemini-2.5-flash-preview-05-20";
+
+            if (string.IsNullOrEmpty(apiKey) || string.IsNullOrEmpty(apiUrl)) return StatusCode(500, "API configuration missing. Check your .env file.");
 
             var client = _httpClientFactory.CreateClient();
 

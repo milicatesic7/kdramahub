@@ -13,7 +13,7 @@ Discover trending shows, search your favorites, manage your own watchlist, and e
   - Set sound and animation preferences
 - **AI Recommendations (Gemini):**  
   Take a quiz, describe your K-Drama tastes, and get intelligent recommendations.  
-  _(You’ll need your own Gemini API key, free keys are configured in Google AI Studio)_
+  \_(You’ll need your own Gemini API key, free keys are configured in Google AI Studio).
 - **Detailed Drama Info:** Click any drama card to see synopsis, ratings, and similar dramas.
 - **Sounds & Animations:** Smooth transitions, cozy effects, and ambient sounds for the perfect viewing vibe.
 
@@ -55,7 +55,16 @@ Follow these steps to run KDramaHub locally.
    git clone https://github.com/milicatesic7/kdramahub.git
    cd kdramahub
 
-2. Setup the Backend (ASP.NET + SQL Server)
+2. Create and connect your database that will store all the user information
+
+Database Name: UserAppDB
+Tables: dbo.Users (Int Id, Varchar Name, Varchar Email, Varchar Password),
+dbo.Favorites (Int Id, Int UserId, Int DramaId),
+dbo.Watches (Int Id, Int UserId, Int DramaId)
+Tech: SQL Server, connected with localhost
+Stores users, favorites, watchlists, and preferences.
+
+3. Setup the Backend (ASP.NET + SQL Server)
    Prerequisites:
 
 Visual Studio 2022+
@@ -74,6 +83,9 @@ Update your appsettings.json connection string if necessary:
 
 Run database migrations:
 dotnet ef database update
+dotnet add package DotNetEnv
+
+Create your own .env file with your Gemini Api Key, see .env.example
 
 Start the backend:
 Press F5 in Visual Studio, or
@@ -84,7 +96,7 @@ dotnet run
 The API should now be running on:
 http://localhost:7147/
 
-3. Setup the Frontend (Vite + React)
+4. Setup the Frontend (Vite + React)
    Prerequisites
    Node.js
    (v18+ recommended)
@@ -99,19 +111,8 @@ cd kdramahub-frontend
 Install dependencies:
 npm install
 
-Create an .env file in the client folder:
-VITE_API_BASE_URL=http://localhost:7147
-VITE_GEMINI_API_KEY=your_gemini_key_here
-
 Start the app:
 npm run dev
 
 Open your browser at:
 http://localhost:5173/
-
-Database Info
-
-Database Name: UserAppDB
-Tech: SQL Server, connected with localhost
-Stores users, favorites, watchlists, and preferences.
-"# kdramahub" 
